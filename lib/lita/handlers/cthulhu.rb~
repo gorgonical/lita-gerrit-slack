@@ -1,0 +1,18 @@
+module Lita
+  module Handlers
+    class Cthulhu < Handler
+      # insert handler code here
+
+      Lita.register_handler(self)
+
+      route /^rlyeh$/i,
+      :iaia,
+      command: true,
+      help: { "rlyeh" => "a cult chant" }
+
+      def iaia(response)
+        response.reply "Ia Ia!"
+      end
+    end
+  end
+end
